@@ -1,7 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<aiml>
-  <category>
-    <pattern>*</pattern>
-    <template>I have no answer for that.</template>
-  </category>
+<aiml version="2.0">
+    <category>
+        <pattern>*</pattern>
+        <template>Oops, not sure about that one. Wanna start over? Just type "Start".</template>
+    </category>
+
+    <category>
+        <pattern>hi</pattern>
+        <template>Hey there! Excited to help you explore computing careers. Just type Start and we'll dive in!</template>
+    </category>
+
+    <category>
+        <pattern>start</pattern>
+        <template>Alright, here we go! Are you leaning towards programming or business-focused roles? 
+            <button><text>Programming</text><postback>program</postback></button>
+            <button><text>Business</text><postback>business</postback></button>
+        </template>
+    </category>
+
+    <category>
+        <pattern>program</pattern>
+        <template>Cool! Are you into designing and being creative, or are you keen on security and keeping things safe? 
+            <button><text>Design and Creativity</text><postback>design</postback></button>
+            <button><text>Protection and Security</text><postback>security</postback></button>
+            <button><text>Not Sure Yet</text><postback>cs</postback></button>
+        </template>
+    </category>
+
+    <category>
+        <pattern>design</pattern>
+        <template>Software Development sounds right up your alley! Check out more on a Software Development Degree here: 
+            <link><text>Click Here</text><url>https://www.wgu.edu/online-it-degrees/software-development-bachelors-program.html</url></link>
+        </template>
+    </category>
+
+    <category>
+        <pattern>security</pattern>
+        <template>Cybersecurity could be your thing! Learn more about a Cybersecurity Degree here: 
+            <link><text>Click Here</text><url>https://www.wgu.edu/online-it-degrees/cybersecurity-information-assurance-bachelors-program.html</url></link>
+        </template>
+    </category>
+
+    <category>
+        <pattern>cs</pattern>
+        <template>Computer Science sounds like a match! Here's some info on a Computer Science Degree: 
+            <link><text>Click Here</text><url>https://www.wgu.edu/online-it-degrees/computer-science.html</url></link>
+        </template>
+    </category>
+
+    <category>
+        <pattern>business</pattern>
+        <template>Neat! How do you feel about math? 
+            <button><text>Yes</text><postback>yesm</postback></button>
+            <button><text>No</text><postback>nom</postback></button>
+        </template>
+    </category>
+
+    <category>
+        <pattern>yesm</pattern>
+        <template>Awesome! Are you more into analysis or security stuff? 
+            <button><text>Analysis</text><postback>analysis</postback></button>
+            <button><text>Security</text><postback>security</postback></button>
+            <button><text>Unsure</text><postback>it</postback></button>
+        </template>
+    </category>
+
+    <category>
+        <pattern>analysis</pattern>
+        <template>Data Management looks like a great choice! More info on a Data Management Degree here: 
+            <link><text>Click Here</text><url>https://www.wgu.edu/online-it-degrees/data-management-analytics-bachelors-program.html</url></link>
+        </template>
+    </category>
+
+    <category>
+        <pattern>it</pattern>
+        <template>Information Technology seems perfect for you! Check out this link for more on an Information Technology Degree: 
+            <link><text>Click Here</text><url>https://www.wgu.edu/online-it-degrees/information-technology-bachelors-program.html</url></link>
+        </template>
+    </category>
+
+    <category>
+        <pattern>nom</pattern>
+        <template>No problem at all! Do you prefer troubleshooting systems or focusing on security? 
+            <button><text>Troubleshooting</text><postback>it</postback></button>
+            <button><text>Security</text><postback>security</postback></button>
+        </template>
+    </category>
+
 </aiml>
